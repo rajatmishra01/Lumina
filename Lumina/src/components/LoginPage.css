@@ -174,23 +174,3 @@ body {
   background-color: white;
   color: #f7c948;
 }
-
-/* ---------- Responsive ---------- */
-/* @media (max-width: 900px) {
-  .container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .login-section,
-  .signup-section {
-    flex: 1;
-    width: 100%;
-    height: auto;
-  }
-
-  .logo-img {
-    position: static;
-    margin-bottom: 20px;
-  }
-} */
