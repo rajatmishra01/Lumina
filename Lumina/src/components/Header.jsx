@@ -1,16 +1,33 @@
 import React from "react";
 import { FaBell } from "react-icons/fa";
-import "./Header.css"; // import css file
 
-const Header = () => {
+
+export default function Header({ onToggleSidebar }) {
   return (
-    <header className="header">
-      <div className="right-section">
-        {/* Bell Icon */}
-        <button className="icon-btn">
-          <FaBell className="icon" />
+    <header className="fixed top-0 left-0 right-0 md:left-56 h-20 bg-white border-b border-gray-200 z-30 flex items-center justify-between px-4">
+      <div className="flex items-center gap-3">
+        <button
+          onClick={() => onToggleSidebar && onToggleSidebar()}
+          className="md:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-yellow-200"
+          aria-label="Open menu"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="#111827" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Right actions */}
+      <div className="flex items-center gap-4">
+        <button
+          aria-label="Notifications"
+          className="p-2 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+        >
+          <FaBell className="text-black cursor-pointer text-3xl" />
         </button>
 
+        {/* <img src="/images/doctor.png" alt="User" className="w-9 h-9 rounded-full object-cover" /> */}
+        
         {/* Profile Picture */}
         <img
           src="https://i.pravatar.cc/40"
@@ -18,11 +35,8 @@ const Header = () => {
           className="profile-pic"
         />
 
-        {/* Logout Button */}
-        <button className="logout-btn">Log Out</button>
+        <button className="px-3 py-1 text-xl cursor-pointer bg-gray-300 font-semibold text-black rounded-md hidden sm:inline">Log Out</button>
       </div>
     </header>
   );
-};
-
-export default Header;
+}

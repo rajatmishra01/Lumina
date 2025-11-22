@@ -37,17 +37,15 @@ body {
 }
 
 /* Logo (top-left corner) */
-.logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px 15px;
-}
 
 .logo-img {
+  position: absolute;
+  top: 0px;
+  left: 25px;
   width: 150px;
-  height: auto;
-  display: block;
+  height: 200x;
+  top: -62px;
+  left: 9px;
 }
 
 /* Centered Text + Button */
