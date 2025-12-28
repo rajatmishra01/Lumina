@@ -1,0 +1,300 @@
+/* Removed global body styles to prevent affecting other pages */
+
+.payment-page-container {
+  /* Removed padding-left and padding-top since Layout.jsx provides spacing */
+  max-width: 1500px;
+  /* Added flex layout to ensure proper stacking */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure it takes full height */
+  /* Increased top padding by 100px to 800px */
+  padding-top: 700px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px; /* Space between tabs and card */
+  flex-wrap: wrap;
+}
+
+/* Responsive tabs */
+@media (max-width: 768px) {
+  .tabs {
+    gap: 8px;
+    justify-content: center;
+  }
+}
+
+.tabs button {
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  /* FIXED: Tab colors */
+  background: #f3f3f3;
+  color: #333;
+  /* Added subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tabs .active {
+  /* FIXED: Active tab color from image */
+  background: #ffd800;
+  color: #000;
+  font-weight: 600;
+}
+
+/* NEW: Main white card container */
+.main-content-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 35px;
+  /* FIXED: This is the main shadow you requested */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive padding for mobile */
+@media (max-width: 768px) {
+  .main-content-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+}
+
+/* Title */
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 0;
+  color: #000;
+}
+.subtitle {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Section */
+.section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Row Box */
+.row-box {
+  /* FIXED: Background color from image */
+  background:#ececec;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 16px;
+  /* Added subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* REMOVED: .upi-input styles */
+
+/* NEW: Styles for the UPI text span */
+.upi-id {
+  flex: 1;
+  font-weight: 500;
+  font-size: 15px;
+  color: #333;
+}
+
+.card-number {
+  flex: 1;
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Card Logos */
+.card-logo {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.card-logo.rupay {
+  color: #0054a6;
+  font-style: italic;
+}
+.card-logo.visa {
+  color: #1a4bb8;
+  font-style: italic;
+  font-size: 20px;
+}
+/* FIXED: CSS-only Mastercard icon */
+.card-logo.mastercard {
+  width: 35px;
+  height: 22px;
+  position: relative;
+  margin-right: 15px;
+}
+.card-logo.mastercard::before,
+.card-logo.mastercard::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  width: 22px;
+  height: 22px;
+}
+.card-logo.mastercard::before {
+  left: 0;
+  background: #eb001b; /* Red */
+}
+.card-logo.mastercard::after {
+  right: 0;
+  background: #f79e1b; /* Orange */
+  opacity: 0.8;
+}
+
+/* Primary radio */
+.primary-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #333;
+}
+.primary-area label {
+  cursor: pointer;
+}
+
+/* FIXED: Custom Radio Button */
+.primary-area input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #dcdcdc; /* Unchecked border */
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+  top: -1px;
+}
+
+.primary-area input[type="radio"]:checked {
+  background-color: #ffd800; /* Solid yellow background */
+  border-color: #ffd800; /* Yellow border */
+}
+
+/* Remove button */
+.remove-btn {
+  /* FIXED: Style to match image */
+  border: none;
+  background: transparent;
+  padding: 8px 0; /* Remove horizontal padding */
+  border-radius: 8px;
+  color: #ff6b6b;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Bottom Grid */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px; /* Increased gap */
+  margin-top: 40px;
+}
+
+/* Recent Activity Box */
+.activity-box,
+.plan-box {
+  /* Added background and shadow to make them separate boxes */
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.activity-box h3,
+.plan-box h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.activity-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.activity-box li {
+  /* FIXED: Use flexbox for alignment */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 16px;
+  color: #333;
+}
+.activity-box li p {
+  margin: 0;
+  padding-right: 10px;
+}
+.activity-box li span {
+  color: #605e5e;
+  font-size: 14px;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+/* Plan Box */
+.plan-name {
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #000;
+}
+.price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.plan-details {
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.tnc {
+  font-size: 14px;
+  color: #007aff;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.change-btn {
+  /* FIXED: Style to match image */
+  margin-top: 10px;
+  background: #ffd800;
+  padding: 14px 20px;
+  width: 100%; /* Full width */
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000;
+}

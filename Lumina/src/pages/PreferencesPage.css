@@ -1,0 +1,144 @@
+/* Preferences Page Container Card */
+.pref-card {
+  background: #ffffff;
+  border-radius: 20px; /* match main-content-card */
+  padding: 30px 35px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* consistent shadow */
+  margin-top: 500px; /* aligned with payment-page-container spacing */
+}
+
+/* Responsive padding for mobile */
+@media (max-width: 768px) {
+  .pref-card {
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 400px; /* reduce spacing on smaller screens */
+  }
+}
+
+/* Headings */
+.pref-card h2 {
+  font-size: 26px; /* match .title */
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #000;
+}
+
+.pref-card p {
+  font-size: 15px; /* match .subtitle */
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.pref-card h3 {
+  margin: 28px 0 16px;
+  font-size: 20px; /* match section-title */
+  font-weight: 600;
+  color: #000;
+}
+
+/* Grid Rows */
+.grid-row {
+  display: flex;
+  gap: 40px; /* match bottom-grid spacing */
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .grid-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+/* Toggle Item Box */
+.item {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ececec; /* match row-box background */
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* subtle shadow */
+}
+
+.item.full {
+  flex-basis: 100%;
+}
+
+.item label {
+  font-weight: 500;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Stacked Form Group */
+.form-group {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group.full {
+  flex-basis: 100%;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 15px;
+  color: #333;
+  padding-left: 4px;
+}
+
+.form-group select {
+  background: #ececec;
+  border-radius: 10px;
+  border: none;
+  padding: 14px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 1.2em;
+}
+
+/* Toggle Switch */
+input[type="checkbox"] {
+  width: 46px;
+  height: 24px;
+  appearance: none;
+  background: #666666;
+  border-radius: 40px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.3s;
+}
+
+input[type="checkbox"]:checked {
+  background: #ffd800; /* match active tab + change-btn */
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translateX(22px);
+}

@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
-
 const InfoCard = ({ emoji, title, value }) => (
   <div className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition">
     <p className="text-sm text-gray-500 flex items-center gap-2">
@@ -17,12 +16,11 @@ export default function Dashboard() {
   const navigate = useNavigate();
 
   return (
-    <div className="mt-120 grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div className="mt-120 grid grid-cols-1 lg:grid-cols-3 gap-6 pl-4 md:pl-6 lg:pl-12">
       {/* Left area (main) */}
       <div className="lg:col-span-2 flex flex-col gap-6">
         <section className="relative h-72 bg-[#FFF7C6] rounded-2xl p-4 md:p-6 lg:p-8 shadow-sm">
           <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-4">
-            {/* Text block - responsive sizes (mobile small, md+ bigger) */}
             <div className="md:ml-20 text-center md:text-left">
               <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-gray-800 leading-tight">
                 Best Caring,
@@ -35,8 +33,7 @@ export default function Dashboard() {
               </p>
             </div>
 
-            {/* Image wrapper: keep your same structure but make it static on small screens and absolute on md+ */}
-            <div className="md:absolute md:right-6 md:top-8 md:w-36 md:h-36  w-32 h-32 shrink-0">
+            <div className="md:absolute md:right-6 md:top-8 md:w-36 md:h-36 w-32 h-32 shrink-0">
               <img
                 src="/images/Image 2.png"
                 alt="Doctor"
@@ -53,13 +50,11 @@ export default function Dashboard() {
             title="Heart rate"
             value="80 beats / min"
           />
-
           <InfoCard
             icon="/images/mingcute_lungs-fill.png"
             title="Lung capacity"
             value="4.75 litres"
           />
-
           <InfoCard
             icon="/images/healthicons_blood-cells-24px.png"
             title="Blood cells"
@@ -68,8 +63,6 @@ export default function Dashboard() {
         </section>
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-          {/* BMI Card - clickable */}
-          {/* BMI Card - clickable */}
           <div
             role="button"
             onClick={() => navigate("/bmi")}
@@ -79,25 +72,20 @@ export default function Dashboard() {
             <h3 className="text-lg font-semibold text-gray-800 mb-4">
               BMI Calculator
             </h3>
-
-            {/* BMI Image */}
             <div className="w-full flex justify-center mb-4">
               <img
-                src="/images/bmi.png" /* <-- put your bmi image in public/images/bmi.png */
+                src="/images/bmi.png"
                 alt="BMI Chart"
                 className="w-44 h-auto"
               />
             </div>
-
-            {/* BMI Details */}
             <ul className="text-sm text-gray-700 space-y-2">
               <li>
                 •<span className="font-medium">Healthy BMI range:</span> 18.5
                 kg/m² – 25 kg/m²
               </li>
               <li>
-                •{" "}
-                <span className="font-medium">Healthy weight for height:</span>{" "}
+                • <span className="font-medium">Healthy weight for height:</span>{" "}
                 59.9 kg – 81 kg
               </li>
               <li>
@@ -110,7 +98,6 @@ export default function Dashboard() {
             </ul>
           </div>
 
-          {/* Health Report Card - clickable */}
           <div
             role="button"
             onClick={() => navigate("/health-report")}
@@ -126,21 +113,14 @@ export default function Dashboard() {
                 <defs>
                   <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
                     <stop offset="0%" stopColor="#a5b4fc" stopOpacity="0.6" />
-                    <stop
-                      offset="100%"
-                      stopColor="#a5b4fc"
-                      stopOpacity="0.05"
-                    />
+                    <stop offset="100%" stopColor="#a5b4fc" stopOpacity="0.05" />
                   </linearGradient>
                 </defs>
-
-                {/* area */}
                 <path
                   d="M0 90 L60 60 L120 80 L180 40 L240 70 L300 50 L360 30 L400 40 L400 120 L0 120 Z"
                   fill="url(#g1)"
                   stroke="none"
                 />
-                {/* line */}
                 <polyline
                   points="0,90 60,60 120,80 180,40 240,70 300,50 360,30 400,40"
                   fill="none"
@@ -150,7 +130,6 @@ export default function Dashboard() {
                   strokeLinejoin="round"
                 />
               </svg>
-
               <p className="text-xs text-gray-500 mt-2">
                 Click to view detailed health report.
               </p>
@@ -160,8 +139,7 @@ export default function Dashboard() {
       </div>
 
       {/* Right sidebar */}
-      <aside className="flex flex-col  ">
-        {/* Calendar card */}
+      <aside className="flex flex-col">
         <div className="bg-[#FFF2A099] w-72 p-4 rounded-2xl">
           <div className="bg-white mb-8 p-4 rounded-xl shadow-sm w-64">
             <div className="mb-4">
@@ -184,12 +162,10 @@ export default function Dashboard() {
                   ▶
                 </button>
               </div>
-
               <div className="text-sm">August 2025</div>
               <div />
             </div>
 
-            {/* Weekday headers */}
             <div className="grid grid-cols-7 gap-1 text-xs text-gray-600 mb-2">
               {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
                 <div key={`wd-${i}`} className="text-center font-medium py-1">
@@ -198,7 +174,6 @@ export default function Dashboard() {
               ))}
             </div>
 
-            {/* Days */}
             <div className="grid grid-cols-7 gap-1 text-xs text-gray-600 mb-3">
               {Array.from({ length: 31 }).map((_, idx) => {
                 const day = idx + 1;
@@ -206,13 +181,11 @@ export default function Dashboard() {
                 return (
                   <div
                     key={`day-${day}`}
-                    className={`h-8 flex items-center justify-center rounded transition
-                ${
-                  isActive
-                    ? "bg-yellow-100 text-yellow-800 font-semibold"
-                    : "hover:bg-gray-100"
-                }
-              `}
+                    className={`h-8 flex items-center justify-center rounded transition ${
+                      isActive
+                        ? "bg-yellow-100 text-yellow-800 font-semibold"
+                        : "hover:bg-gray-100"
+                    }`}
                     role="button"
                     tabIndex={0}
                     aria-pressed={isActive ? "true" : "false"}
@@ -233,7 +206,6 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Recent Appointments card */}
           <div className="bg-white p-4 rounded-2xl shadow-sm w-64">
             <div className="flex items-center justify-between mb-3">
               <h4 className="text-lg font-semibold text-gray-800">
@@ -256,29 +228,23 @@ export default function Dashboard() {
                   </div>
                 </div>
               </li>
-
               <li className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-lg bg-yellow-50 text-yellow-700 flex items-center justify-center">
                   🩺
                 </div>
                 <div>
-                  <div className="text-sm font-medium">
-                    Regular Kidney checkup
-                  </div>
+                  <div className="text-sm font-medium">Regular Kidney checkup</div>
                   <div className="text-xs text-gray-500">
                     Aug 28, 2025 • 2:00 PM
                   </div>
                 </div>
               </li>
-
               <li className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-lg bg-red-50 text-red-700 flex items-center justify-center">
                   💊
                 </div>
                 <div>
-                  <div className="text-sm font-medium">
-                    Heart Scan - Dr. Roy
-                  </div>
+                  <div className="text-sm font-medium">Heart Scan - Dr. Roy</div>
                   <div className="text-xs text-gray-500">
                     Aug 02, 2025 • 11:30 AM
                   </div>

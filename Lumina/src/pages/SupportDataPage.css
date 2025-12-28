@@ -1,0 +1,144 @@
+/* Support Page Container */
+.support-page {
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Match spacing logic from payment page */
+  padding-top: 600px; /* aligned with payment-page-container */
+}
+
+/* Titles */
+.page-title {
+  font-size: 26px; /* match .title */
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.page-subtitle {
+  font-size: 15px; /* match .subtitle */
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.support-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px; /* match bottom-grid spacing */
+  margin-top: 40px;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Card Container */
+.card {
+  background: #ffffff;
+  border-radius: 20px; /* match main-content-card */
+  padding: 30px 35px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* consistent shadow */
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+}
+
+/* Card Title */
+.card-title {
+  font-size: 20px; /* match section-title */
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #000;
+}
+
+/* Inputs */
+.input,
+.textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background: #ececec; /* match row-box background */
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+}
+
+.input {
+  height: 40px;
+}
+
+.textarea {
+  height: 90px;
+  resize: none;
+}
+
+/* Button */
+.send-btn {
+  width: 100%; /* full width like change-btn */
+  height: 44px;
+  border-radius: 10px;
+  background: #ffd800; /* match active tab + change-btn */
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+  margin-top: 10px;
+}
+
+/* FAQ / Ticket / Data Items */
+.faq-item,
+.ticket-item,
+.data-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ececec; /* match row-box */
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* subtle shadow */
+}
+
+.ticket-item small {
+  font-size: 13px;
+  color: #605e5e;
+}
+
+/* Tag Button */
+.tag-btn {
+  background: #ffd800;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Contact Info */
+.contact-info {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.support-email,
+.support-phone {
+  font-size: 14px;
+  color: #007aff; /* match tnc link color */
+  margin-bottom: 6px;
+}

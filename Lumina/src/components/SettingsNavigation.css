@@ -1,0 +1,54 @@
+/* Settings Navigation Component Styles */
+
+.settings-navigation {
+  /* Container for the navigation bar */
+  background-color: #ffffff;
+  padding: 16px 0;
+  border: 1px solid #e5e7eb; /* var(--border-color) */
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); /* var(--shadow-sm) */
+}
+
+.navigation-tabs {
+  display: flex;
+  gap: 16px;
+  justify-content: center; /* Center the tabs */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.navigation-tabs button {
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid #e5e7eb; /* var(--border-color) */
+  border-radius: 8px;
+  background-color: #ffffff; /* var(--bg-card) */
+  color: #292e38; /* var(--text-medium) */
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.navigation-tabs button.active {
+  background-color: #FFE855; /* var(--primary-yellow) */
+  color: #090909; /* var(--text-dark) */
+  border-color: #FFE855;
+}
+
+.navigation-tabs button:hover:not(.active) {
+  background-color: #f3f4f6; /* var(--bg-button-light) */
+  border-color: #697487; /* var(--text-light) */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navigation-tabs {
+    gap: 8px;
+  }
+
+  .navigation-tabs button {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
